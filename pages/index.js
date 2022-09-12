@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 //https://github.com/mschwarzmueller/nextjs-course-code/tree/02-file-based-routing
-
+// https://github.com/bradtraversy/simple_react_pagination
 export default function Home() {
   const router = useRouter();
   const goTo = (param) =>{
