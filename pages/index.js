@@ -1,4 +1,5 @@
 
+import { useEffect,useState } from 'react';
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -20,6 +21,19 @@ export default function Home() {
     })
     
   }
+  useEffect(() => {
+    loadJson()
+  }, [])
+
+    const  loadJson = async () =>{
+      fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then((json) =>{
+        console.log('json')
+        console.log(json)
+      } )
+
+    }
 
 
   return (
@@ -40,6 +54,11 @@ export default function Home() {
          </li>
         
         </ul>
+      </div>
+
+      <div className='container mx-auto bg-sky-200 mt-7'>
+        sky
+
       </div>
        
     </div>
